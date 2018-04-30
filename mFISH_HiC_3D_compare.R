@@ -28,7 +28,7 @@ ctr.mF <- cbind(mFISH.3D.data[,1:2],ctr.mF)
 names(ctr.mF) <- c("Serial.Num","TAD.id","x","y","z")
 
 ## obtain mean (over replicates) 3D structure
-## depends on multiplex FISH replicates having same coordinate system
+## depends on multiplex FISH replicates having and/or being aligned to a common reference frame 
 
 mean.mF.coords <- aggregate(ctr.mF,by=list(ctr.mF$TAD.id),FUN=mean,na.rm=T)
 
