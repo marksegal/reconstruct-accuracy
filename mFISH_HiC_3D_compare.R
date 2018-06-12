@@ -71,7 +71,7 @@ p.ss <- procrustes.mean.mF.HiC$ss
 
 ## histogram of sum-of-squared deviations of multiplex FISH replicates from mean multiplex FISH structure with sum-of-squared deviations of HiC reconstruction from mean multiplex FISH structure indicated
 
-pdf(file=paste("histogram-comp-mF-HiC","pdf",sep=".")
+pdf(file=paste("histogram-comp-mF-HiC","pdf",sep="."))
 hist(na.omit(procrustes.mean.mF.ss),col=4,main="",xlab="mFISH Procrustes ss",xlim=c(min(p.ss,procrustes.mean.mF.ss)-0.01,max(p.ss,procrustes.mean.mF.ss)+0.01))
 abline(v=p.ss,col=2)
 
