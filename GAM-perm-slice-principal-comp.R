@@ -1,3 +1,5 @@
+## License: GPL (>= 3.0)
+## Copyright: Mark Segal (2018)
 GAM_perm_slice_principal_comp <- function(GAM.3D.data, GAM.segment.data, NP.num=100, nperm=1000, scale=TRUE) {
 
   ## GAM.3D.data : 3D coordinates of reconstruction based on GAM proximities (normalized linkage disequilibrium) for a given chromosome, as obtained for example from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE64881.  Format is start,end,x,y,z where start,end specify genome coordinates corresponding to the 3D reconstruction given by x,y,z.

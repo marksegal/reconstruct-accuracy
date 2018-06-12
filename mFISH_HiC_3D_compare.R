@@ -1,3 +1,5 @@
+## License: GPL (>= 3.0)
+## Copyright: Mark Segal (2018)
 mFISH_HiC_3D_compare <- function(mFISH.3D.data, mFISH.genome.data, HiC.3D.data, symmetric = FALSE) {
 
   ## mFISH.3D.data: multiplex FISH 3D coordinates and replicates cf Table S4 Wang et al., 2016.
