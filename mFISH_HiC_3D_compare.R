@@ -1,4 +1,4 @@
-"mFISH_HiC_3D_compare" <- function(mFISH.3D.data, mFISH.genome.data, HiC.3D.data, symmetric = F) {
+"mFISH_HiC_3D_compare" <- function(mFISH.3D.data, mFISH.genome.data, HiC.3D.data, symmetric = FALSE) {
 
   ## mFISH.3D.data: multiplex FISH 3D coordinates and replicates cf Table S4 Wang et al., 2016.
   ## mFISH.genome.data: multiplex FISH genome coordinates cf Table S1 Wang et al., 2016.
@@ -20,7 +20,7 @@
 
   for (i in 1:nSerNum) {
     mF.i <- mFISH.3D.data[mFISH.3D.data$Serial.Num == i, 3:5]
-    ctr.mF.i <- scale(mF.i, center = T, scale = F)
+    ctr.mF.i <- scale(mF.i, center = TRUE, scale = FALSE)
     ctr.mF <- rbind(ctr.mF, ctr.mF.i)
   }
 
@@ -30,7 +30,7 @@
   ## obtain mean (over replicates) 3D structure
   ## depends on multiplex FISH replicates having and/or being aligned to a common reference frame
 
-  mean.mF.coords <- aggregate(ctr.mF, by = list(ctr.mF$TAD.id), FUN = mean, na.rm = T)
+  mean.mF.coords <- aggregate(ctr.mF, by = list(ctr.mF$TAD.id), FUN = mean, na.rm = TRUE)
 
   ## impute individual replicate/TAD missing 3D coords using mean structure as template
 
