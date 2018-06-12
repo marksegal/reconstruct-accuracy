@@ -5,7 +5,7 @@ mFISH_HiC_3D_compare <- function(mFISH.3D.data, mFISH.genome.data, HiC.3D.data, 
 
   ## HiC.3D.data: genomic and 3D coordinates from reconstruction based on HiC or other conformational assay.  Format: start,end,x,y,z where start,end give genome coords
   ## all data are chromosome specific
-  ## symmetric argument to procrustes alignment function : set to F so mean mFISH structure serves as common referent
+  ## symmetric argument to procrustes alignment function : set to FALSE so mean mFISH structure serves as common referent
 
   library(vegan)
 
