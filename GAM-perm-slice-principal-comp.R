@@ -6,7 +6,7 @@
   ## nperm: number of permutations of detection indicators
   ## scale: perform principal components on scaled (unit variance) data
 
-  reslt <- matrix(NA, nrow = nperm, ncol = 18)
+  reslt <- matrix(NA_real_, nrow = nperm, ncol = 18)
 
   ## obtain profiles with sufficient detections
 

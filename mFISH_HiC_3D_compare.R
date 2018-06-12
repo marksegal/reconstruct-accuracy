@@ -43,8 +43,8 @@
 
   ## compute procrustes sum-of-squared deviations of replicates from mean multiplex FISH structure
 
-  procrustes.mean.mF.ss <- rep(NA, nSerNum)
-  procrustes.mean.mF.scale <- rep(NA, nSerNum)
+  procrustes.mean.mF.ss <- rep(NA_real_, nSerNum)
+  procrustes.mean.mF.scale <- rep(NA_real_, nSerNum)
 
   for (i in 1:nSerNum) {
     procrust.mean.i <- procrustes(mean.mF.coords[, 4:6], imp.mF.coords[((i - 1) * nTADs + 1):(i * nTADs), 3:5], symmetric = symmetric)
@@ -57,7 +57,7 @@
 
   ## bin HiC data to align with (generally lower resolution) multiplex FISH data
 
-  HiC.genome.matched.coords <- matrix(NA, nrow = nrow(mFISH.genome.data), ncol = 3)
+  HiC.genome.matched.coords <- matrix(NA_real_, nrow = nrow(mFISH.genome.data), ncol = 3)
 
   for (i in 1:nrow(mFISH.genome.data)) {
     mat.HiC <- HiC.3D.data[(HiC.3D.data$start >= mFISH.genome.data$Start.genomic.coordinate[i]) & (HiC.3D.data$end <= mFISH.genome.data$End.genomic.coordinate[i]), 3:5 ]
