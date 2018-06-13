@@ -76,10 +76,7 @@ mFISH_HiC_3D_compare <- function(mFISH.3D.data, mFISH.genome.data, HiC.3D.data, 
   pdf(file = paste("histogram-comp-mF-HiC", "pdf", sep = "."))
   hist(na.omit(procrustes.mean.mF.ss), col = 4, main = "", xlab = "mFISH Procrustes ss", xlim = c(min(p.ss, procrustes.mean.mF.ss) - 0.01, max(p.ss, procrustes.mean.mF.ss) + 0.01))
   abline(v = p.ss, col = 2)
-
   dev.off()
 
-  reslt <- list(mean.mF.coords = mean.mF.coords, imp.mF.coords = imp.mF.coords, HiC.genome.matched.coords = HiC.genome.matched.coords, procrustes.mean.mF.ss = procrustes.mean.mF.ss, procrustes.mean.mF.scale = procrustes.mean.mF.scale, procrustes.mean.mF.HiC = procrustes.mean.mF.HiC, nSerNum = nSerNum, nTADs = nTADs)
-
-  reslt
+  list(mean.mF.coords = mean.mF.coords, imp.mF.coords = imp.mF.coords, HiC.genome.matched.coords = HiC.genome.matched.coords, procrustes.mean.mF.ss = procrustes.mean.mF.ss, procrustes.mean.mF.scale = procrustes.mean.mF.scale, procrustes.mean.mF.HiC = procrustes.mean.mF.HiC, nSerNum = nSerNum, nTADs = nTADs)
 }
